@@ -2,48 +2,50 @@
 
 {% block content %}
 
-<!-- Page Content -->
-<section class="template-content">
+<div class="bk-default">
 
-	<!-- Template Widgets -->
+	<!-- Page Content -->
+	<section class="template-content">
 
-	<div class="theme-header">
-		<div class="flex-container">
-			<div class="brand flex-item">
-				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+		<!-- Template Widgets -->
+
+		<div class="theme-header">
+			<div class="flex-container">
+				<div class="brand flex-item">
+					{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+					{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+				</div>
+				<div class="flex-item">
+					<div class="nav-line"></div>
+					{{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+				</div>
 			</div>
-			<div class="flex-item">
-				<div class="nav-line"></div>
-				{{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+			<div class="header-widget profile-right">
+				{{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
 			</div>
 		</div>
-		<div class="header-widget profile-right">
-			{{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+
+		<!-- End Template Widgets -->
+
+		<div class="container">		
+			<!-- Main Widet Zone -->
+			{{zone('main')|raw}}
 		</div>
-	</div>
-
-	<!-- End Template Widgets -->
-
-	<div class="container">		
-		<!-- Main Widet Zone -->
-		{{zone('main')|raw}}
-	</div>
-	 
-   	<div class="theme-footer">
-   		<div class="footer-icon"></div>
-   		<div class="container">
-	   		<div class="footer-one">
-		   		{{widget('profile', 'email', { 'profileType':'email', 'email':'profile'})|raw}}
-		   	</div>
-		   	<div class="footer-two profile-right">
-		   		{{widget('profile', 'phone', { 'profileType':'phone', 'phone':'profile'})|raw}}
-		   	</div>
-		</div>
-   	</div>
-
-
-</section>
-<!-- End Page Content -->
+		 
+	   	<div class="theme-footer">
+	   		<div class="footer-icon"></div>
+	   		<div class="container">
+		   		<div class="footer-one">
+			   		{{widget('profile', 'email', { 'profileType':'email', 'email':'profile'})|raw}}
+			   	</div>
+			   	<div class="footer-two profile-right">
+			   		{{widget('profile', 'phone', { 'profileType':'phone', 'phone':'profile'})|raw}}
+			   	</div>
+			</div>
+	   	</div>
+	</section>
+	<!-- End Page Content -->
+	
+</div>
 
 {% endblock %}
