@@ -1,0 +1,345 @@
+// ------------------------------------------
+// BaseKit Baseplate: CSS > Plugin: Ecommerce
+// ------------------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #SINGLE PRODUCT
+// 2. #PRODUCT LIST
+// 3. #BASKET WIDGET
+// 4. #BASKET SUMMARY
+
+
+// -------------------------------
+// 1. #Single Product
+// -------------------------------
+
+.product__product-article {
+    background-color: darken(@color-swatch1, 3%);
+    border: 1px solid darken(@color-swatch1, 7%);
+}
+
+// Product images
+//----------------
+
+.product-images {
+    width: 100%;
+    margin-bottom: 1em;
+    float: left;
+}
+
+.product__gallery-item {
+    background-color: transparent;
+}
+
+// Product content
+//----------------
+
+.product-content {
+    display: inline-block;
+    .form-group {
+        margin: 20px 0;
+        select {
+            width: 100%;
+        }
+        .button {
+            float: left;
+            width: 47%;
+            padding: 10px 0;
+            &:hover {
+                background-color: transparent;
+                border: 2px solid darken(@color-swatch1, 50%);
+                color: @color-swatch3;
+            }
+        }
+    }
+    .product-title, .product-price {
+        font-size: @font-swatch3-font-size;
+        line-height: @font-swatch3-line-height;
+        color: @font-swatch5-color;
+    }
+    .product-price {
+        color: @color-swatch3;
+    }
+}
+
+// Categories and tags
+//--------------------
+
+.product-attributes {
+    margin-top: 2em;
+    .product-attribute-title, .product__tags-title {
+        font-family: @font-swatch7-font-family;
+    }
+}
+
+// Product options
+//----------------
+
+.product-actions {
+    margin-top: 2em;
+    font-family: @font-swatch7-font-family;
+}
+
+// View basquet button
+//--------------------
+
+.view-basket-wrap .button {
+    float: right;
+    width: 47%;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid darken(@color-swatch1, 50%);
+    color: @color-swatch3;
+    padding: 10px 0;
+    &:hover {
+        background-color: @font-swatch7-background-color;
+        border: 2px solid @color-swatch3;
+        color: @font-swatch7-color;
+    }
+}
+
+// Media queries for single product
+//---------------------------------
+
+ @media only screen and (min-width: 770px) {
+    .product__product-article {
+        padding: 3em;
+    }
+    .product-images {
+        width: 51%;
+        margin-right: 4%;
+        text-align: center;
+    }
+    .product-content {
+        width: 45%;
+        display: inline-block;
+    }
+}
+
+@media @tablet {
+    .product__product-article {
+        padding: 2em;
+    }
+    .product-article, .listing-order, .listing-body {
+        background-color: darken(@color-swatch1, 3%);
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .product-article, .listing-body {
+        padding: 20px;
+    }
+    .view-basket-wrap .button {
+        width: 100%;
+    }
+    .product-content .form-group .button {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+// -----------------------------
+// 2. #Product List
+// -----------------------------
+
+.bk-ecomproductslist, .bk-ecomfeaturedproducts {
+    text-align: center;
+    .listing-title {
+        padding-bottom: 50px;
+    }
+    .listing-order {
+        font-family: @font-swatch2-font-family;
+        padding-bottom: 40px;
+    }
+}
+
+// Featured products
+//------------------
+
+.bk-ecomfeaturedproducts .listing-title {
+    padding: 1em 0 2em;
+}
+
+// Filters
+//--------
+
+.product-filters .form .form-body .button {
+    padding: 0 20px;
+    margin: 0;
+    height: 44px;
+}
+
+@media @mobile {
+    .product-filters .form .form-body .form-group {
+        select, input, .button {
+            width: 100%;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    }
+    .product-listing__form-group {
+        width: 100%;
+    }
+}
+
+// Product List
+//-------------
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;     
+}
+
+// Product Item
+//-------------
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+.product-listing__image-link, .product__image-list {
+    background-color: transparent;
+}
+
+// Item details
+
+.product-item-details {
+    background-color: darken(@color-swatch1, 3%);
+    border: 1px solid darken(@color-swatch1, 7%);
+    padding: 20px;
+    margin-top: 10px;
+    .product-item-title {
+        padding-bottom: 0;
+        a {
+            font-family:@font-swatch2-font-family;
+            font-size:@font-swatch5-font-size;
+            font-weight: @font-swatch5-font-weight;
+            line-height:@font-swatch5-line-height;
+            color: @color-swatch3;
+            letter-spacing: @font-swatch5-letter-spacing;
+            &:hover {
+                color: @color-swatch3;
+            }
+        }
+    }
+    .product-item-price {
+        padding-bottom: 0;
+    }
+}
+
+// Pagination
+
+.product-listing__listing-footer {
+    border-top: 1px solid lightgray;
+    margin-top: 40px;
+    padding-top: 40px;
+}
+
+.product-listing__listing-footer .pagination-item {
+    .button {
+        border: 1px solid @color-swatch3;
+        background-color: transparent;
+        color: @color-swatch5;
+        padding: 4px 12px;
+        &:hover {
+            background-color: @font-swatch7-background-color;
+            color: @font-swatch7-color;
+        }
+    }
+    .pagination-item--current a {
+        background-color: @font-swatch7-background-color;
+        color: @font-swatch7-color;
+    }
+    .button--previous, .button--next {
+        background-color: transparent;
+        color: @color-swatch3;
+        border: none;
+        &:hover {
+            color: @color-swatch3;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// -----------------------------
+// 3. #Basket Widget
+// -----------------------------
+
+.basket__basket-item { position: relative; }
+.basket__item-image  { width: 200px; }
+
+// Display basket image and content inline
+.basket-item-image,
+.basket-item-details {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    @media @tablet {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+// Item Remove Button
+.item-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    // Remove icon spacing
+    &:before {
+        margin-right: 0;
+    }
+}
+// Hide button text
+.remove-text { 
+    display: none;
+}
+
+// Basket Image
+.basket__image {
+    max-height: 200px;
+    max-width: 200px;
+    @media @mobile {
+        max-height: inherit;
+    }
+}
+
+
+
+
+// -------------------------------
+// 4. #Basket Widget
+// -------------------------------
+
+.bk-ecombasketsummary {
+    .summary-title {
+        padding-bottom: 2em;
+    }
+}
+
+.bk-ecombasketsummary .summary-form {
+    background-color: transparent;
+    text-align: inherit;
+}
+ 
+ .quantity-wrap input, input[type=number].quantity-field {
+    height: 28px;
+}

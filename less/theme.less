@@ -1,0 +1,273 @@
+// ------------------------------
+// BaseKit Baseplate: CSS > Theme
+// ------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+
+// 1. #HEADER
+// 2. #FOOTER
+// 3. #ZONE
+// 4. #TYPOGRAPHY
+// 5. #FORMS
+
+
+
+
+// -----------------------------
+// 1. #Header
+// -----------------------------
+
+body {
+	border-top: 5px solid @color-swatch2;
+}
+
+.theme-header {
+    padding: 30px 0 16px;
+    position: relative;
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+        width: 960px; // 1140px - 10% for margins
+        margin: 0 auto;
+    }
+    @media @tablet {
+        width: 100%;
+        margin: 0;
+    }
+    .brand {
+        padding-bottom: 14px;
+        @media @tablet {
+            padding-bottom: 30px;
+            width: 90%;
+            margin: 0 5%;
+            text-align: center;
+        }
+    }
+}
+
+.default .theme-header {
+    border-bottom: 1px solid darken(@color-swatch1, 20%);
+    @media @tablet {
+        padding: 30px 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// 2. #Footer
+// -----------------------------
+
+.theme-footer {
+	border-top: 1px solid darken(@color-swatch1, 20%);
+	padding: 2em 0;
+	margin: 2em 0 0.5em;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+	.footer-icon {
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            margin-left: -15px;
+            top: -14px;
+            width: 28px; 
+            height: 28px; 
+            background-color: @color-swatch1;
+            border: 1px solid darken(@color-swatch1, 60%);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            box-shadow: -7px 7px 0 -3px darken(@color-swatch1, 60%);
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            margin-left: -15px;
+            top: -14px;
+            width: 28px; 
+            height: 28px;  
+            background-color: @color-swatch1;
+            border: 1px solid darken(@color-swatch1, 60%);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            box-shadow: 7px -7px 0 -3px darken(@color-swatch1, 60%);
+        }
+	}
+}
+
+.footer-one, .profile-right {
+    max-width: 50%;
+    @media @tablet {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footer-one {
+	float: left;
+}
+
+.footer-two {
+    float: left;
+	@media only screen and (min-width: 769px) {
+		float: right;
+	}
+}
+
+.profile-right .bk-profile {
+    @media only screen and (min-width: 769px) {
+        text-align: right;
+    }
+    @media @tablet {
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+
+// -----------------------------
+// 3. #ZONE
+// -----------------------------
+
+.bk-zone {
+    padding: 1em 0 2em;
+}
+
+
+
+
+// -----------------------------
+// 4. #Typography
+// -----------------------------
+
+// Colour Swatches
+// ---------------
+
+// @color-swatch1: Background
+// @color-swatch2: Contrast
+// @color-swatch3: Buttons
+// @color-swatch4: Headings
+// @color-swatch5: Paragraph
+// @color-swatch6: Navigation Links
+// @color-swatch7: Spare
+
+
+// Colour Variables
+// ----------------
+
+@bg-color: @color-swatch1;          // Background
+@contrast-color: @color-swatch2;    // Contrast Colour
+@button-color: @color-swatch3;      // Button BG Colour
+@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
+@paragraph-color: @color-swatch5;   // Paragraph Text Colour
+@nav-color: @color-swatch6;         // Nav Link Colour
+@spare-color: @color-swatch7;       // Spare Colour
+
+
+// Font Swatches
+// -------------
+
+// font1:  Heading 1
+// font2:  Heading 2
+// font3:  Heading 3
+// font4:  Heading 4
+// font5:  Paragraph
+// font6:  Navigation Link
+// font7:  Buttons
+// font8:  Feature Headline
+// font9:  Feature Strapline
+// font10: Company Name (Logo)
+
+
+
+
+
+// -----------------------------
+// 5. #Forms
+// -----------------------------
+
+.form:not(.product__form) {
+    text-align: center;
+    background-color: darken(@color-swatch1, 3%);
+    border: 2px solid darken(@color-swatch1, 50%);
+    padding: 1em;
+    .legend {
+        font-family:@font-swatch3-font-family;
+        font-size:bkscale(@font-swatch3-font-size,0.9);
+        font-weight: @font-swatch3-font-weight;
+        line-height:bkscale(@font-swatch3-line-height,0.9);
+        color: @color-swatch3;
+        letter-spacing: @font-swatch3-letter-spacing;
+        padding: 10px 20px 20px;
+    }
+    .label {
+        font-family:@font-swatch3-font-family;
+        font-size:@font-swatch5-font-size;
+        font-weight: @font-swatch5-font-weight;
+        line-height:@font-swatch5-line-height;
+        color: @font-swatch5-color;
+        letter-spacing: @font-swatch5-letter-spacing;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .form:not(.product__form) {
+        text-align: center;
+        margin: 40px 0 30px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        .form-body {
+            padding: 5em 2em 1em;
+            background-color: darken(@color-swatch1, 3%);
+            border: 2px solid darken(@color-swatch1, 50%);
+        }
+        .legend {
+            background-color: darken(@color-swatch1, 3%);
+            border: 2px solid darken(@color-swatch1, 50%);
+            padding: 15px 20px;
+            position: absolute;
+            margin-top: -31px;
+            right: 30%;
+            left: 30%;
+            &:before {
+              content: '';
+              position: absolute;
+              top: 3px;
+              left: -5px;
+              bottom: 3px;
+              background: darken(@color-swatch1, 50%);
+              width: 5px;
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              top: 3px;
+              right: -5px;
+              bottom: 3px;
+              background: darken(@color-swatch1, 50%);
+              width: 5px;
+            }
+        }
+    }
+}
+
+input[type="search"], input[type="email"], input[type="password"], textarea, .input--single-line, .input--search.product-listing__input, select {
+    height: 44px;
+}
+
+

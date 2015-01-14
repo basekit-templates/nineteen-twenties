@@ -1,0 +1,62 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Page Content -->
+<section class="template-content">
+
+	<!-- Template Widgets -->
+
+	<div class="theme-header">
+		<div class="flex-container">
+			<div class="brand flex-item">
+				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+			</div>
+			<div class="flex-item">
+				<div class="nav-line"></div>
+				{{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+			</div>
+		</div>
+		<div class="header-widget profile-right">
+			{{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+		</div>
+	</div>
+
+	<div class="feature-gallery">
+	  {{widget('gallery', 'homepagegallery', 
+	  {'showDescription': true,
+	  'showTitle': true,
+	  'images':
+	  [
+	  {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/1.jpg'), 'title':'test title', 'description': 'test desc'},
+	  {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/2.jpg'), 'title':'test title', 'description': 'test desc'},
+	  {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/3.jpg'), 'title':'test title', 'description': 'test desc'}
+	  ]
+	  })|raw}}
+	</div>
+
+	<!-- End Template Widgets -->
+
+	<div class="container">
+		<!-- Main Widet Zone -->
+		{{zone('main')|raw}}
+	</div>
+	 
+   	<div class="theme-footer">
+   		<div class="footer-icon"></div>
+   		<div class="container">
+	   		<div class="footer-one">
+		   		{{widget('profile', 'email', { 'profileType':'email', 'email':'profile'})|raw}}
+		   	</div>
+		   	<div class="footer-two profile-right">
+		   		{{widget('profile', 'phone', { 'profileType':'phone', 'phone':'profile'})|raw}}
+		   	</div>
+		</div>
+   	</div>
+
+
+</section>
+<!-- End Page Content -->
+
+{% endblock %}

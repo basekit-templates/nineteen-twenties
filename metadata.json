@@ -1,0 +1,106 @@
+{
+    "name": "Nineteen Twenties",
+    "thumbnail": "thumbnail.png",
+    "widgetVersion":2,
+    "pageTypes":["home"],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#303943",
+            "color3":"#a46a04",
+            "color4":"#a46a04",
+            "color5":"#5b626a",
+            "color6":"#313943",
+            "color7":"#ffffff"
+        }
+    },
+    "fontSwatch": {
+       "title": "Helvetica Neue, Helvetica, Arial, sans-serif",
+        "font1": {
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "30px",
+            "font-weight": "400",
+            "line-height": "40px",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "26px",
+            "font-weight": "400",
+            "line-height": "36px",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "22px",
+            "font-weight": "400",
+            "line-height": "32px",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch3",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+         },
+        "font7": {
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,10%)"
+        },
+        "font8": {
+            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-size": "24px",
+            "font-weight": "400",
+            "line-height": "34px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "24px",
+            "font-weight": "400",
+            "line-height": "34px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        }
+    }
+}
