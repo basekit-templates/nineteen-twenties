@@ -48,6 +48,7 @@
             float: left;
             width: 47%;
             padding: 10px 0;
+            border: 2px solid @color-swatch3;
             &:hover {
                 background-color: transparent;
                 border: 2px solid darken(@color-swatch1, 50%);
@@ -69,9 +70,13 @@
 //--------------------
 
 .product-attributes {
+    display: inline-block;
     margin-top: 2em;
     .product-attribute-title, .product__tags-title {
         font-family: @font-swatch7-font-family;
+    }
+    .product-attribute-title {
+        margin-right: 5px;
     }
 }
 
