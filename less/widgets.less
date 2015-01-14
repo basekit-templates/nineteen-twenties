@@ -65,13 +65,13 @@
 .navigation-list {
     margin: 0;
     &.align-left {
-    text-align: left;
+        text-align: left;
     }
     &.align-right {
-    text-align: right;
+        text-align: right;
     }
     &.align-center {
-    text-align: center;
+        text-align: center;
     }
 }
 
@@ -278,6 +278,9 @@
     .navigation-item {
         width: 100%;
         border-bottom: 1px solid darken(@color-swatch1, 7%);
+    }
+    .navigation-item--child {
+        background-color: darken(@color-swatch1, 3%);
     }
 }
 
@@ -838,37 +841,18 @@ ul.slides-list {
     @media @mobile {
         padding: 8px 20px;
         width: 100%;
+        text-align: center;
     }
 }
 
-//  8.2  #TWEET
-//  --------------
+// Facebook like
 
-.tweet-button {
-    // Add styles here
+.bk-facebooklike .facebook-button .button, .bk-facebooklike .facebook-button .button:hover {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
 }
-
-//  8.4  #DROPBOX
-//  --------------
-
-.dropbox-button {
-    // Add styles here
-}
-
-//  8.5  #CLICK TO CALL
-//  --------------
-
-.click-to-call {
-    // Add styles here
-}
-
-//  8.5  #PAYPAL
-//  --------------
-
-.paypal-button {
-    // Add styles here
-}
-
 
 
 
@@ -1066,13 +1050,14 @@ hr.rule {
 // -----------------------------
 
 .header-widget.profile-right {
-    margin-top: 16px;
+    margin-top: 20px;
     display: inline-block;
     width: 100%;
     @media only screen and (min-width: 770px) {
         position: absolute;
         top: 30px;
         right: 0;
+        margin-top: 0;
     }
 }
 
