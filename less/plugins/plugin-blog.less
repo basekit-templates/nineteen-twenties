@@ -1,31 +1,31 @@
-// -------------------------------------
-// BaseKit Baseplate: CSS > Plugin: Blog
-// -------------------------------------
+// -------------------------------------------
+// BaseKit Standard Theme: LESS > Plugin: Blog
+// -------------------------------------------
 
 .post-article {
-	background-color: darken(@color-swatch1, 3%);
+    background-color: darken(@color-swatch1, 3%);
     border: 1px solid darken(@color-swatch1, 10%);
     padding: 3em 0 2em;
     @media @tablet {
-    	padding: 2em;
+        padding: 2em;
     }
 }
 
 
 .blog-post-list__post-image, .post-content, .post-footer {
-	width: 70%;
-	@media @tablet {
-		width: 100%;
-	}
+    width: 70%;
+    @media @tablet {
+        width: 100%;
+    }
 }
 
 .blog-post-list__post-image {
-	margin: 0 auto 20px;
+    margin: 0 auto 20px;
 }
 
 .post-content, .post-footer {
-	margin: 0 auto;
-	text-align: left;
+    margin: 0 auto;
+    text-align: left;
 }
 
 // List of posts
@@ -33,12 +33,12 @@
 
 .blog-post-list__post-footer .timestamp {
     @media only screen and (min-width: 481px) {
-		padding-bottom: 3em;
-		text-align: right;
-		margin-top: -52px;
-	}
-	padding: 20px 0 0;
-	font-family: @font-swatch7-font-family;
+        padding-bottom: 3em;
+        text-align: right;
+        margin-top: -52px;
+    }
+    padding: 20px 0 0;
+    font-family: @font-swatch7-font-family;
     font-size: @font-swatch7-font-size;
     font-weight: @font-swatch7-font-weight;
     line-height: @font-swatch7-line-height;
@@ -56,14 +56,14 @@
     display: inline-block;
     margin-top: 2em;
     @media @mobile {
-    	margin-top: 1em;
+        margin-top: 1em;
     }
     &:hover {
-    	text-decoration: none;
-    	color: @font-swatch7-color;
-    	background-color: @color-swatch3;
-    	border: 2px solid @color-swatch3;
-    	color: @font-swatch7-color-hover;
+        text-decoration: none;
+        color: @font-swatch7-color;
+        background-color: @color-swatch3;
+        border: 2px solid @color-swatch3;
+        color: @font-swatch7-color-hover;
     }
 }
 
@@ -71,71 +71,71 @@
 // ---------
 
 .blog-post__post-image {
-	margin: 0 40px 40px;
-	@media @tablet {
-		margin: 0 0 20px;
-	}
+    margin: 0 40px 40px;
+    @media @tablet {
+        margin: 0 0 20px;
+    }
 }
 
 .blog-post__post-footer .timestamp {
-	display: block;
-	width: 100%;
-	margin: 1em 0;
-	font-family: @font-swatch7-font-family;
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+    font-family: @font-swatch7-font-family;
 }
 
 .post-attributes {
-	.category-title, .tags-title {
-		font-family: @font-swatch7-font-family;
-	}
-	.category-title {
-		display: inline-block;
-	}
+    .category-title, .tags-title {
+        font-family: @font-swatch7-font-family;
+    }
+    .category-title {
+        display: inline-block;
+    }
 }
 
 ul.sharing-links {
-	width: 100%;
-	display: inline-block;
-	.network-item {
-		@media @mobile {
-			width: 100%;
-			text-align: center;
-		}
-	}
-	.button {
-		background-color: transparent;
-		border: 2px solid darken(@color-swatch1, 50%);
-		color: @color-swatch5;
-		&.icon:before {
-			margin-right: 10px;
-		}
-		&.icon--twitter:before {
-			color: #4099FF;
-		}
-		&.icon--facebook:before  {
-			color: #3b5998;
-		}
-		&.icon--googleplus:before  {
-			color: #d34836;
-		}
-		&:hover {
-			color: @color-swatch1;
-			&.icon--twitter:before, &.icon--facebook:before, &.icon--googleplus:before {
-				color: @color-swatch1;
-			}
-			&.icon--twitter {
-				background-color: #4099FF;
-				border: 2px solid #4099FF;
-			}
-			&.icon--facebook {
-				background-color: #3b5998;
-				border: 2px solid #3b5998;
-			}
-			&.icon--googleplus {
-				background-color: #d34836;
-				border: 2px solid #d34836;
-			}
-		}
-	}
+    width: 100%;
+    display: inline-block;
+    .network-item {
+        @media @mobile {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .button {
+        background-color: transparent;
+        border: 2px solid darken(@color-swatch1, 50%);
+        color: @color-swatch5;
+        &.icon:before {
+            margin-right: 10px;
+        }
+        &.icon--twitter:before {
+            color: #4099FF;
+        }
+        &.icon--facebook:before  {
+            color: #3b5998;
+        }
+        &.icon--googleplus:before  {
+            color: #d34836;
+        }
+        &:hover {
+            color: @color-swatch1;
+            &.icon--twitter:before, &.icon--facebook:before, &.icon--googleplus:before {
+                color: @color-swatch1;
+            }
+            &.icon--twitter {
+                background-color: #4099FF;
+                border: 2px solid #4099FF;
+            }
+            &.icon--facebook {
+                background-color: #3b5998;
+                border: 2px solid #3b5998;
+            }
+            &.icon--googleplus {
+                background-color: #d34836;
+                border: 2px solid #d34836;
+            }
+        }
+    }
 }
 

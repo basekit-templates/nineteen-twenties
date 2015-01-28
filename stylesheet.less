@@ -1,6 +1,7 @@
-// --------------------------------
-// BaseKit Baseplate Template (v1.0)
-// --------------------------------
+// ----------------------------------
+// BaseKit Standard Theme: Stylesheet
+// ----------------------------------
+
 
 // -----------------------------
 // #Table of Contents
@@ -8,7 +9,6 @@
 
 // 1. #LESS INCLUDES
 // 2. #PAGE SETTINGS
-// 3. #TEMPLATE STYLES
 
 
 
@@ -45,23 +45,20 @@
 .container {
     width: 90%;
     margin: 0 5%;
+    padding: 1em 0 2em;
     @media only screen and (min-width: 1140px) {
-    	width: 960px; // 1140px - 10% for margins
-		margin: 0 auto;
-	}
-	@media only screen and (min-width:600px) {
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
+        width: 960px; // 1140px - 10% for margins
+        margin: 0 auto;
+    }
+    @media only screen and (min-width:600px) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
 
-
-// -----------------------------
-// 3. #Template Styles
-// -----------------------------
+// Links
+// --------------
 
 a {
-	color: @color-swatch3;
+    color: @color-swatch3;
 }
-
-

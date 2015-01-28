@@ -1,8 +1,19 @@
 {
     "name": "Nineteen Twenties",
-    "thumbnail": "thumbnail.png",
     "widgetVersion":2,
+    "thumbnail": "thumbnail.png",
+    "screenshot": "thumbnail.png",
     "pageTypes":["home"],
+    "tags": {
+    },
+    "images":[
+        "images/gallery/1.jpg",
+        "images/gallery/2.jpg",
+        "images/gallery/3.jpg",
+        "images/gallery/4.jpg",
+        "images/gallery/5.jpg",
+        "images/gallery/6.jpg"
+    ],
     "colorSwatches":
     {
         "Swatch 1": {
@@ -76,7 +87,7 @@
             "color": "@color-swatch1",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch3",
-            "background-color-hover": "darken(@color-swatch3,10%)"
+            "background-color-hover": "lighten(@color-swatch3,5%)"
         },
         "font8": {
             "font-family": "\"PT Serif\", Georgia, serif",

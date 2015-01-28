@@ -1,6 +1,6 @@
-// ------------------------------
-// BaseKit Baseplate: CSS > Theme
-// ------------------------------
+// ------------------------------------
+// BaseKit Standard Theme: LESS > Theme
+// ------------------------------------
 
 
 // -----------------------------
@@ -10,9 +10,8 @@
 
 // 1. #HEADER
 // 2. #FOOTER
-// 3. #ZONE
-// 4. #TYPOGRAPHY
-// 5. #FORMS
+// 3. #TYPOGRAPHY
+// 4. #FORMS
 
 
 
@@ -21,12 +20,12 @@
 // 1. #Header
 // -----------------------------
 
-body {
-	border-top: 5px solid @color-swatch2;
+.theme-border-top {
+    border-top: 5px solid @color-swatch2;
 }
 
 .theme-header {
-    padding: 30px 0 16px;
+    padding: 30px 0 21px;
     position: relative;
     width: 90%;
     margin: 0 5%;
@@ -38,18 +37,92 @@ body {
         width: 100%;
         margin: 0;
     }
-    .brand {
-        padding-bottom: 14px;
-        @media @tablet {
-            padding-bottom: 30px;
-            width: 90%;
-            margin: 0 5%;
-            text-align: center;
+}
+
+// Flexbox for header on desktop
+
+@media only screen and (min-width: 770px) {
+    .flex-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
         }
+
+    .flex-item {
+        min-width: 50%;
+    }
+
+    .flex-item:nth-child(1) {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+        }
+
+    .flex-item:nth-child(2) {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
     }
 }
 
-.bk-default .theme-header {
+
+.brand {
+    padding-bottom: 9px;
+    @media @tablet {
+        padding-bottom: 30px;
+        width: 90%;
+        margin: 0 5%;
+        text-align: center;
+    }
+}
+
+// Border-bottom in Default Page
+.theme-default .theme-header {
     border-bottom: 1px solid darken(@color-swatch1, 20%);
     @media @tablet {
         padding: 30px 0;
@@ -63,52 +136,19 @@ body {
 // 2. #Footer
 // -----------------------------
 
+// The style for the graphic in the top border of the footer is in widgets.less (class '.rule')
+
 .theme-footer {
-	border-top: 1px solid darken(@color-swatch1, 20%);
-	padding: 2em 0;
-	margin: 2em 0 0.5em;
+    border-top: 1px solid darken(@color-swatch1, 20%);
+    padding: 2em 0;
+    margin: 2em 0 0.5em;
     position: relative;
     display: inline-block;
     width: 100%;
-	.footer-icon {
-        &:before {
-            content: "";
-            position: absolute;
-            left: 50%;
-            margin-left: -15px;
-            top: -14px;
-            width: 28px; 
-            height: 28px; 
-            background-color: @color-swatch1;
-            border: 1px solid darken(@color-swatch1, 60%);
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-            box-shadow: -7px 7px 0 -3px darken(@color-swatch1, 60%);
-        }
-        &:after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            margin-left: -15px;
-            top: -14px;
-            width: 28px; 
-            height: 28px;  
-            background-color: @color-swatch1;
-            border: 1px solid darken(@color-swatch1, 60%);
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-            box-shadow: 7px -7px 0 -3px darken(@color-swatch1, 60%);
-        }
-	}
 }
 
-.footer-one, .profile-right {
+.theme-footer__one,
+.profile-right {
     max-width: 50%;
     @media @tablet {
         max-width: 100%;
@@ -117,18 +157,18 @@ body {
     }
 }
 
-.footer-one {
-	float: left;
-}
-
-.footer-two {
+.theme-footer__one {
     float: left;
-	@media only screen and (min-width: 769px) {
-		float: right;
-	}
 }
 
-.profile-right .bk-profile {
+.theme-footer__two {
+    float: left;
+    @media only screen and (min-width: 769px) {
+        float: right;
+    }
+}
+
+.profile-right .profile {
     @media only screen and (min-width: 769px) {
         text-align: right;
     }
@@ -139,19 +179,10 @@ body {
 }
 
 
-// -----------------------------
-// 3. #ZONE
-// -----------------------------
-
-.bk-zone {
-    padding: 1em 0 2em;
-}
-
-
 
 
 // -----------------------------
-// 4. #Typography
+// 3. #Typography
 // -----------------------------
 
 // Colour Swatches
@@ -197,26 +228,35 @@ body {
 
 
 // -----------------------------
-// 5. #Forms
+// 4. #Forms
 // -----------------------------
 
 .form:not(.product__form) {
-    text-align: center;
     background-color: darken(@color-swatch1, 3%);
     border: 2px solid darken(@color-swatch1, 50%);
     .legend {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
         font-family:@font-swatch3-font-family;
         font-size:bkscale(@font-swatch3-font-size,0.9);
         font-weight: @font-swatch3-font-weight;
         line-height:bkscale(@font-swatch3-line-height,0.9);
-        color: @color-swatch1;
         letter-spacing: @font-swatch3-letter-spacing;
-        padding: 10px;
-        width: 100%;
-        background-color: darken(@color-swatch1, 50%);
+        color: @color-swatch3;
+        background-color: darken(@color-swatch1, 8%);
     }
     .form-body {
-        padding: 1em;
+        padding: 3em;
+        @media @mobile {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+    .form-group {
+        @media @mobile {
+            margin-bottom: 20px;
+        }
     }
     .label {
         font-family:@font-swatch3-font-family;
@@ -228,57 +268,68 @@ body {
     }
 }
 
+// Legend for screens larger than 600px
 @media only screen and (min-width:600px) {
     .form:not(.product__form) {
-        text-align: center;
         margin: 40px 0 30px;
         background-color: transparent;
         border: none;
         padding: 0;
         .form-body {
-            padding: 5em 2em 1em;
             background-color: darken(@color-swatch1, 3%);
             border: 2px solid darken(@color-swatch1, 50%);
         }
         .legend {
             background-color: darken(@color-swatch1, 3%);
             border: 2px solid darken(@color-swatch1, 50%);
-            color: @color-swatch3;
             padding: 15px 10px;
             position: absolute;
             margin-top: -31px;
             width: auto;
             right: 30%;
             left: 30%;
-            &:before {
-              content: '';
-              position: absolute;
-              top: 3px;
-              left: -5px;
-              bottom: 3px;
-              background: darken(@color-swatch1, 50%);
-              width: 5px;
-            }
-            &:after {
-              content: '';
-              position: absolute;
-              top: 3px;
-              right: -5px;
-              bottom: 3px;
-              background: darken(@color-swatch1, 50%);
-              width: 5px;
-            }
+        }
+        // Legent Left Border
+        .legend:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: -5px;
+            bottom: 3px;
+            background: darken(@color-swatch1, 50%);
+            width: 5px;
+        }
+        // Legent Right Border
+        .legend:after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            right: -5px;
+            bottom: 3px;
+            background: darken(@color-swatch1, 50%);
+            width: 5px;
         }
     }
 }
 
-input[type="search"], input[type="email"], input[type="password"], textarea, .input--single-line, .input--search.product-listing__input, select {
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line,
+.input--search.product-listing__input,
+select {
     height: 44px;
+}
+
+// Form Buttons
+input[type="submit"] {
+    margin: 0;
 }
 
 // Forms in responsive columns //
 
-.bk-responsivecolumns {
+.responsivecolumns {
     @media only screen and (max-width:900px) {
         .form .legend {
             right: 20%;
@@ -292,4 +343,3 @@ input[type="search"], input[type="email"], input[type="password"], textarea, .in
         }
     }
 }
-
