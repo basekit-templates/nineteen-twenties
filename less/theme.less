@@ -91,6 +91,8 @@
         -webkit-align-self: auto;
         -ms-flex-item-align: auto;
         align-self: auto;
+        min-width: 20%;
+        max-width: 70%;
         }
 
     .flex-item:nth-child(2) {
@@ -107,6 +109,7 @@
         -webkit-align-self: auto;
         -ms-flex-item-align: auto;
         align-self: auto;
+        min-width: 70%;
     }
 }
 
@@ -148,7 +151,7 @@
 }
 
 .theme-footer__one,
-.profile-right {
+.theme-footer__two {
     max-width: 50%;
     @media @tablet {
         max-width: 100%;
@@ -231,7 +234,7 @@
 // 4. #Forms
 // -----------------------------
 
-.form:not(.product__form) {
+.form {
     background-color: darken(@color-swatch1, 3%);
     border: 2px solid darken(@color-swatch1, 50%);
     .legend {
@@ -270,7 +273,7 @@
 
 // Legend for screens larger than 600px
 @media only screen and (min-width:600px) {
-    .form:not(.product__form) {
+    .form {
         margin: 40px 0 30px;
         background-color: transparent;
         border: none;

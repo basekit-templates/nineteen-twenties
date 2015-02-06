@@ -38,8 +38,8 @@
 // 1.  #Logo
 // -----------------------------
 
-.company-logo {
-    // Add styles here
+.logo-image {
+    margin: 0 auto;
 }
 
 
@@ -67,25 +67,25 @@
 // Navigation alignment
 .extendednavigation {
     &.align-left { text-align: left; }
-    &.align-right { text-align: right; }
     &.align-center { text-align: center; }
+    &.align-right {
+        text-align: right;
+        // Negative margin-right to right align nav
+        @media only screen and (min-width: 770px) {
+            margin-right: -28px;
+        }
+    }
 }
-
 
 // Extended navigation top margin
 .navigation-list:not(.navigation-list--children) {
-    @media only screen and (min-width: 900px) {
-        margin: 2em 0 0;
-    }
+    margin: 2em 0 0;
 }
 
 // Padding for navigation items on desktop
 @media only screen and (min-width: 770px) {
     .navigation-item:first-child:not(.navigation-item--child) .item-name {
         padding: 9px 28px 9px 0;
-    }
-    .navigation-item:last-child:not(.navigation-item--child) .item-name {
-        padding: 9px 0 9px 0;
     }
     .navigation-item .item-name {
         padding: 9px 28px 9px 0;
@@ -563,7 +563,7 @@
 
 // Slideshow Height
 .slides-list,
-.responsiveslideshow__figure {
+.responsiveslideshow .figure {
     position: relative;
     min-height: 400px;
     @media @tablet {
@@ -579,14 +579,12 @@
 // ----------------
 
 // Use Background-image Method
-.responsiveslideshow__figure {
+.responsiveslideshow .figure {
     background-size: cover;
     background-position: center;
 }
 // Hide Img Element
-.responsiveslideshow__image {
-    display: none;
-}
+.responsiveslideshow .image { display: none; }
 
 .slides-list {
     margin-bottom: 50px;
@@ -595,7 +593,7 @@
 // Slideshow Image Captions
 // ------------------------
 
-.responsiveslideshow__caption {
+.responsiveslideshow .caption {
     position: absolute;
     bottom: 0;
     right: 10%;
@@ -1077,17 +1075,18 @@
 // Header
 .theme-header--profile {
     display: inline-block;
-    width: 100%;
     margin-top: 20px;
+    width: 100%;
     // Style for desktop only
     @media only screen and (min-width: 770px) {
         position: absolute;
         top: 30px;
         right: 0;
+        max-width: 30%;
         margin-top: 0;
         // Address
         .profile .address-line {
-                display: inline-block;
+            display: inline-block;
         }
     }
     // Style for tablet and mobile
@@ -1158,6 +1157,11 @@
     display: none;
 }
 
+// Address
+
+.profile .address-line {
+    padding-bottom: 0;
+}
 
 
 

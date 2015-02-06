@@ -3,35 +3,56 @@
 // -------------------------------------------
 
 
+// -------------
 // Menu sections
+// -------------
 
-.menu-navigation {
-    border-bottom: 1px solid darken(@color-swatch1, 20%);
-    text-align: center;
+
+.menusections {
     padding: 0 0 2.5em;
+    text-align: center;
+    border-bottom: 1px solid darken(@color-swatch1, 20%);
     @media only screen and (max-width: 599px) {
         padding: 0;
     }
 }
 
-.menu-item {
-    border-bottom: 1px solid darken(@color-swatch1, 8%);
-    padding-bottom: 30px;
+.menusections-list {
+    display: table;
+    margin: 0;
+    width: 100%;
 }
 
-.menu-navigation-item {
+.menusections-item {
+    display: inline-block;
+    margin-right: 12px;
+    // Dash after menu item
     &:after {
         content: '\2044';
-        color: darken(@color-swatch1, 20%);
         padding-left: 8px;
+        color: darken(@color-swatch1, 20%);
         @media only screen and (max-width: 599px) {
             content: '';
             padding-left: 0;
         }
     }
+    // No dash for last menu item
     &:last-child:after {
         content: '';
         padding-left: 0;
+    }
+    // Style for Small Screens
+    @media only screen and (max-width: 599px) {
+        padding: 15px 0 10px 0;
+        width: 100%;
+        border-bottom: 1px solid darken(@color-swatch1,7%);
+    }
+    &:last-child {
+        padding-right: 0;
+        margin-right: 0;
+        @media only screen and (max-width: 599px) {
+            border-bottom: 1px solid darken(@color-swatch1,7%);
+        }
     }
 }
 
@@ -43,54 +64,39 @@
     line-height:@font-swatch6-line-height;
     letter-spacing: @font-swatch6-letter-spacing;
     &:hover {
-        color: @font-swatch6-color-hover;
         text-decoration: none;
-    }
-}
-
-.menu-navigation-list {
-    display: table;
-    width: 100%;
-    margin: 0;
-    .menu-navigation-item {
-        display: inline-block;
-        @media only screen and (max-width: 599px) {
-            width: 100%;
-            border-bottom: 1px solid darken(@color-swatch1,7%);
-            padding: 15px 0 10px 0;
-        }
-        &:last-child {
-            padding-right: 0;
-            @media only screen and (max-width: 599px) {
-                border-bottom: 1px solid darken(@color-swatch1,7%);
-            }
-        }
+        color: @font-swatch6-color-hover;
     }
 }
 
 
-//Menu
+
+// -------------
+// Menu
+// -------------
+
 
 // Main Section Header
-.widget__menu > .menu-section > {
+
+.menu > .menu-section > {
     .section-header {
         margin: 2em 0 0;
         padding: 2em 0;
         text-align: center;
         .section-title {
+            position: relative;
+            padding: 10px 20px;
+            color: @color-swatch3;
             background-color: darken(@color-swatch1, 3%);
             border: 2px solid darken(@color-swatch1, 50%);
-            padding: 10px 20px;
-            position: relative;
-            color: @color-swatch3;
             &:before {
               content: '';
               position: absolute;
               top: 3px;
               left: -5px;
               bottom: 3px;
-              background: darken(@color-swatch1, 50%);
               width: 5px;
+              background: darken(@color-swatch1, 50%);
             }
             &:after {
               content: '';
@@ -98,8 +104,8 @@
               top: 3px;
               right: -5px;
               bottom: 3px;
-              background: darken(@color-swatch1, 50%);
               width: 5px;
+              background: darken(@color-swatch1, 50%);
             }
             @media only screen and (min-width: 550px) {
                 display: inline-block;
@@ -109,58 +115,68 @@
 }
 
 .section-description {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 // Subsection Header
 
-.menu-section--subsection .section-header {
-    margin: 2em 0;
-    padding: 2em 0;
-    text-align: center;
+.menu-section--subsection {
+    .section-header {
+        margin: 2em 0 0;
+        padding: 2em 0 0;
+        text-align: center;
+    }
     .section-title {
-        color: darken(@color-swatch1, 50%);
         padding-bottom: 10px;
+        color: darken(@color-swatch1, 50%);
+    }
+    .section-subtitle {
+        font-family: @font-swatch5-font-family;
+        color: @font-swatch5-color;
+        font-size: @font-swatch5-font-size;
+        font-weight: @font-swatch5-font-weight;
+        line-height: @font-swatch5-line-height;
     }
 }
 
 // Promoted Subsection
 
 .menu-section--featured {
-    .section-header {
-        margin: 0 0 2em;
-        padding: 0 0 1.5em;
-        border-bottom: 1px solid darken(@color-swatch1,20%);
-    }
-    box-sizing: border-box;
     position: relative;
-    width: 100%;
+    padding: 2em 3em;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
     border: 2px solid darken(@color-swatch1, 50%);
     background-color: darken(@color-swatch1, 3%);
-    padding: 2em 3em;
     &:before, &:after {
         position: absolute;
         content: "";
-        background-color: inherit;
-        border: inherit;
         top: -20px;
         bottom: initial;
         left: 16px;
         right: 16px;
         height: 20px;
+        border: inherit;
+        background-color: inherit;
     }
     &:before {
         border-bottom: none;
     }
     &:after {
-        border-top: none;
         top: initial;
         bottom: -20px;
+        border-top: none;
+    }
+    .section-header {
+        margin: 0 0 2em;
+        padding: 0 0 1.5em;
+        border-bottom: 1px solid darken(@color-swatch1,20%);
     }
     @media @mobile {
         padding: 20px;
-        &:before, &:after {
+        &:before,
+        &:after {
             display: none;
         }
         .section-header {
@@ -172,19 +188,20 @@
 
 // Item Image
 
-.item-image {
-    background-color: darken(@color-swatch1, 3%);
+.menu .item-image {
+    margin: 0 auto;
+    width: 100%;
 }
 
 // Item Price
 
 .item-price {
+    padding: 5px 0;
     font-family: @font-swatch3-font-family;
-    color: @font-swatch3-color;
+    color: @font-swatch5-color;
     font-size: @font-swatch3-font-size;
     font-weight: @font-swatch3-font-weight;
     line-height: @font-swatch3-line-height;
-    padding: 10px 0;
 }
 
 // Promoted Item
@@ -192,8 +209,18 @@
 .menu-item--featured .item-header {
     &:before {
         content: "\2665";
-        color: @color-swatch3;
         font-size: 32px;
+        color: @color-swatch3;
+    }
+}
+
+.menu .menu-item--featured .item-image .image-link {
+    background-color: darken(@color-swatch1, 5%)
+}
+
+.menu-item--featured {
+    .item-content {
+        margin-top: 0;
     }
 }
 
@@ -210,7 +237,7 @@
 // Section footer
 
 .menu__section-footer {
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
 }
 
