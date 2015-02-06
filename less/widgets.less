@@ -114,8 +114,16 @@
     border-top-color: @font-swatch6-color-hover;
 }
 
-// Borders in Folder
-.navigation-list--children { border: 1px solid darken(@color-swatch1, 7%); }
+// Border and width in Folder
+.navigation-list--children {
+    right: 0;
+    left: inherit;
+    width: auto;
+    min-width: 132px;
+    white-space: normal;
+    border: 1px solid darken(@color-swatch1, 7%);
+}
+
 .navigation-item--child {
     border-bottom: 1px solid darken(@color-swatch1, 7%);
     &:last-child {
