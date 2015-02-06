@@ -92,7 +92,7 @@
 }
 
 .product-actions .form {
-    margin: 20px 0;
+    margin: 20px 0 30px;
     border: none;
     @media @mobile {
         float: left;
@@ -135,7 +135,7 @@
             background-color: transparent;
             border: 2px solid darken(@color-swatch1, 50%);
         }
-        @media @mobile {
+        @media only screen and (max-width: 600px) {
             width: 100%;
         }
     }
@@ -272,14 +272,17 @@
 // Product List
 //-------------
 
+
 .product-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+
 // Product Item
 //-------------
+
 
 .product-item {
     position: relative;
