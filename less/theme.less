@@ -234,19 +234,54 @@
 // 4. #Forms
 // -----------------------------
 
+
 .form {
-    background-color: darken(@color-swatch1, 3%);
-    border: 2px solid darken(@color-swatch1, 50%);
     .legend {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
         font-family:@font-swatch3-font-family;
         font-size:bkscale(@font-swatch3-font-size,0.9);
         font-weight: @font-swatch3-font-weight;
         line-height:bkscale(@font-swatch3-line-height,0.9);
         letter-spacing: @font-swatch3-letter-spacing;
         color: @color-swatch3;
+    }
+    .label {
+        font-family:@font-swatch3-font-family;
+        font-size:@font-swatch5-font-size;
+        font-weight: @font-swatch5-font-weight;
+        line-height:@font-swatch5-line-height;
+        color: @font-swatch5-color;
+        letter-spacing: @font-swatch5-letter-spacing;
+    }
+}
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line,
+.input--search.product-listing__input,
+select {
+    height: 44px;
+}
+
+// Form Buttons
+input[type="submit"] {
+    margin: 0;
+}
+
+
+// Contact Form, Signup, and Blogsearch
+// ------------------------------------
+
+.contactform,
+.signupform,
+.blogsearch {
+    background-color: darken(@color-swatch1, 3%);
+    border: 2px solid darken(@color-swatch1, 50%);
+    .legend {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
         background-color: darken(@color-swatch1, 8%);
     }
     .form-body {
@@ -261,19 +296,13 @@
             margin-bottom: 20px;
         }
     }
-    .label {
-        font-family:@font-swatch3-font-family;
-        font-size:@font-swatch5-font-size;
-        font-weight: @font-swatch5-font-weight;
-        line-height:@font-swatch5-line-height;
-        color: @font-swatch5-color;
-        letter-spacing: @font-swatch5-letter-spacing;
-    }
 }
 
 // Legend for screens larger than 600px
 @media only screen and (min-width:600px) {
-    .form {
+    .contactform,
+    .signupform,
+    .blogsearch {
         margin: 40px 0 30px;
         background-color: transparent;
         border: none;
@@ -315,22 +344,80 @@
     }
 }
 
-input[type="search"],
-input[type="email"],
-input[type="password"],
-textarea,
-.input--single-line,
-.input--search.product-listing__input,
-select {
-    height: 44px;
+
+// Signup, Blogsearch, and Ecom Products Filter
+// --------------------------------------------
+
+// Style for tablet and desktop
+@media only screen and (min-width : 480px) {
+
+    .signupform__form-body,
+    .blogsearch__form-body,
+    .ecomproductslist .form-body {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+
+    .signupform__form-group:first-child,
+    .blogsearch__form-group:first-child,
+    .ecomproductslist .fieldset--search .form-group:first-child {
+        -ms-flex: 0 11 100%;
+        -webkit-flex: 0 11 100%;
+        flex: 0 11 100%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+
+    .button--submit.blogsearch__input,
+    .button--submit.signupform__input,
+    .ecomproductslist .fieldset--search .button--submit.ecomproductslist__input {
+        height: 44px;
+        padding: 0 18px;
+        margin: 0 0 0 -2px;
+    }
+    .ecomproductslist .fieldset--filters .form-group {
+        -ms-flex: 1 1 25%;
+        -webkit-flex: 1 1 25%;
+        flex: 1 1 25%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+        .select {
+            width: 100%;
+        }
+    }
 }
 
-// Form Buttons
-input[type="submit"] {
-    margin: 0;
-}
+// Forms in responsive columns
+// ---------------------------
 
-// Forms in responsive columns //
 
 .responsivecolumns {
     @media only screen and (max-width:900px) {

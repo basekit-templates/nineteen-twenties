@@ -192,7 +192,7 @@
     text-align: center;
     .listing-title {
         padding-top: 10px;
-        padding-bottom: 45px;
+        padding-bottom: 25px;
     }
     .listing-order {
         padding-bottom: 40px;
@@ -245,24 +245,17 @@
 }
 
 .product-filters .form {
-    .button {
-        padding: 0 20px;
-        margin: 0;
-        height: 44px;
-    }
-    .label {
         text-align: left;
+    .legend {
+        padding: 10px 0;
+    }
+    .form-body {
+        padding: 10px 20px;
+        background-color: darken(@color-swatch1, 3%);
     }
     @media @mobile {
-        select,
-        .input--search,
-        .button {
-            width: 100%;
-        }
-        input {
-            margin-bottom: 10px;
-        }
-        .form-group {
+        .form-group,
+        .select {
             width: 100%;
         }
     }
