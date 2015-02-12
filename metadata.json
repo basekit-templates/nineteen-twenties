@@ -1,8 +1,9 @@
 {
-    "name": "Nineteen Twenties",
+    "name": "Nineteen-Twenties",
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
     "screenshot": "thumbnail.png",
+    "templateType":"standard",
     "pageTypes":["home"],
     "tags": {
     },
