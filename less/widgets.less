@@ -118,7 +118,6 @@
     right: 0;
     left: inherit;
     width: auto;
-    min-width: 132px;
     white-space: normal;
     border: 1px solid darken(@color-swatch1, 7%);
 }
@@ -169,7 +168,10 @@
             height: 3px;
             margin: 0 auto 3px;
             background-color: @font-swatch6-color;
-            .transition( all, 0.5s, ease );
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
             &.three {
                 margin-bottom: 0;
             }
@@ -834,6 +836,7 @@
     text-align: right;
     .social-link {
         color: @color-swatch2;
+        font-size: 22px;
         &:hover {
             text-decoration: none;
             color: @color-swatch3;
@@ -1017,11 +1020,21 @@
 
 // Header
 .theme-header--profile {
+    /*display: inline-block;
+    margin-top: 20px;
+    width: 100%;*/
+
+    position: relative;
+    right: 0;
+    margin-top: 0;
+    text-align: right;
+    margin-bottom: 50px;
     display: inline-block;
     margin-top: 20px;
     width: 100%;
+
     // Style for desktop only
-    @media only screen and (min-width: 770px) {
+    /*@media only screen and (min-width: 770px) {
         position: absolute;
         top: 30px;
         right: 0;
@@ -1031,6 +1044,14 @@
         .profile .address-line {
             display: inline-block;
         }
+    }*/
+
+    .profile {
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-width: 30%;
+        width: 100%;
     }
     // Style for tablet and mobile
     @media @tablet {

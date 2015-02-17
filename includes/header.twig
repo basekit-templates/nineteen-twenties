@@ -1,6 +1,9 @@
 <div class="theme-border-top"></div>
 <!-- Template Widgets -->
 <div class="theme-header">
+    <div class="theme-header--profile profile-right">
+        {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+    </div>
     <div class="flex-container">
         <div class="brand flex-item">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
@@ -10,8 +13,5 @@
             <div class="extendednavigation-line"></div>
             {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
         </div>
-    </div>
-    <div class="theme-header--profile profile-right">
-        {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
     </div>
 </div>
