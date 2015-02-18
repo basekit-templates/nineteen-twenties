@@ -5,8 +5,7 @@
     "screenshot": "thumbnail.png",
     "templateType":"standard",
     "pageTypes":["home"],
-    "tags": {
-    },
+    "tags": {"en": ["photography", "portfolio", "art", "images", "gallery", "creative"] },
     "images":[
         "images/gallery/1.jpg",
         "images/gallery/2.jpg",
