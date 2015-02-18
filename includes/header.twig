@@ -7,11 +7,11 @@
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
         <div class="flex-item">
+            <div class="theme-header--profile profile-right">
+                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
             <div class="extendednavigation-line"></div>
             {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
         </div>
-    </div>
-    <div class="theme-header--profile profile-right">
-        {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
     </div>
 </div>
