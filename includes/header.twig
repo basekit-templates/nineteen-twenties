@@ -6,12 +6,19 @@
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
-        <div class="flex-item">
-            <div class="theme-header--profile profile-right">
+
+        <div class="flex-container-2">
+
+            <div class="flex-item">
                 {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
             </div>
-            <div class="extendednavigation-line"></div>
-            {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+
+            <div class="flex-item-two">
+                <div class="extendednavigation-line"></div>
+                    {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+            </div>
         </div>
+
     </div>
+
 </div>

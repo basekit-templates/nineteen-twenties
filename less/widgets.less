@@ -38,7 +38,9 @@
 // -----------------------------
 
 .logo-image {
-    margin: 0 auto;
+    @media @tablet {
+        margin: 0 auto;
+    }
 }
 
 
@@ -63,10 +65,10 @@
 // -----------------------------
 
 [data-widget-type="extendednavigation"] { 
-    bottom: 25px;
+    /*bottom: 25px;
     position: absolute;
     right: 0;
-    clear: both;
+    clear: both;*/
     @media @tablet {
         bottom: initial;
         position: relative;
@@ -150,7 +152,7 @@
     @media @tablet {
         height: 1px;
         background-color: darken(@color-swatch1, 20%);
-        margin-top: 22px;
+        margin-top: 50px;
     }
 }
 
