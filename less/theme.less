@@ -328,6 +328,32 @@ input[type="submit"] {
     }
 }
 
+// Hide label in Blogsearch
+// ------------------------
+
+.blogsearch {
+    label {
+        display: none;
+    }
+    .form-body {
+        padding: 4em 3em 2em;
+        @media only screen and (max-width:599px) {
+            padding: 30px 20px;
+            text-align: center;
+        }
+    }
+    .form-group {
+        margin-bottom: 0;
+    }
+    @media @mobile {
+        .form-group .input {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+}
+
+
 // Legend for screens larger than 600px
 @media only screen and (min-width:600px) {
     .contactform,
