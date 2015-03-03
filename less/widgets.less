@@ -173,23 +173,41 @@
         overflow: hidden;
         line-height: 0;
         outline: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @font-swatch6-color-hover;
+            box-shadow: 0 6px 0 @font-swatch6-color-hover;
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 12px;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @font-swatch6-color-hover;
+            .transition( all, 0.5s, ease );
+        }
         &:hover {
             background-color: @font-swatch6-color-hover;
-            .bar {
-                 background-color: darken(@color-swatch1, 7%);
+             &:before {
+                background: @color-swatch1;
+                box-shadow: 0 6px 0 @color-swatch1;
             }
-        }
-        .bar { // Toggle Button Closed State
-            width: 19px;
-            height: 3px;
-            margin: 0 auto 3px;
-            background-color: @font-swatch6-color;
-            -webkit-transition: all 0.5s ease;
-            -moz-transition: all 0.3s ease;
-            -o-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-            &.three {
-                margin-bottom: 0;
+            &:after {
+                background: @color-swatch1;
             }
         }
     }
@@ -197,27 +215,36 @@
     .open & {
         &.navigation-toggle {
             background-color: @font-swatch6-color-hover;
-        }
-        &.bar,
-        &.bar:hover {
-            background-color: darken(@color-swatch1, 7%);
-        }
-        &.one {
-            -webkit-transform:  rotate(45deg) translate(4px, 5px);
-            -moz-transform:  rotate(45deg) translate(4px, 5px);
-            -o-transform:  rotate(45deg) translate(4px, 5px);
-            -ms-transform:  rotate(45deg) translate(4px, 5px);
-            transform:  rotate(45deg) translate(4px, 5px);
-        }
-        &.two {
-            opacity: 0;
-        }
-        &.three {
-            -webkit-transform:  rotate(-45deg) translate(3px,-5px);
-            -moz-transform:  rotate(-45deg) translate(3px,-5px);
-            -o-transform:  rotate(-45deg) translate(3px,-5px);
-            -ms-transform:  rotate(-45deg) translate(3px,-5px);
-            transform:  rotate(-45deg) translate(3px,-5px);
+            &:before {
+                margin-top: 21px;
+                background: @color-swatch1;
+                box-shadow: none;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                .transition( all, 0.5s, ease );
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 3px;
+                top: 0;
+                left: 50%;
+                right: 0;
+                margin-top: 21px;
+                margin-left: -13px;
+                background: @color-swatch1;
+                box-shadow: none;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                .transition( all, 0.5s, ease );
+            }
         }
     }
     .navigation-body {
