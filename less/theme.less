@@ -570,7 +570,6 @@ input[type="submit"] {
             margin: 0 auto -5px;
             padding: 10px;
             text-align: center;
-            background-color: darken(@color-swatch1, 8%);
         }
         .form-body {
             padding: 20px;
@@ -586,7 +585,50 @@ input[type="submit"] {
         }
         .button {
             width: 100%;
+            white-space: normal;
         }
     }
+}
+
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+@media only screen and (min-width: 925px) {
+    .signupform__form-body,
+    .blogsearch__form-body {
+        display: inline-block;
+    }
+    .contactform,
+    .signupform,
+    .blogsearch {
+        .legend {
+            position: relative;
+            left: 0;
+            right: 0;
+            width: 90%;
+            margin: 0 auto -5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .form-body {
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 0;
+        }
+        .form-group .input {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .button {
+            width: 100%;
+            white-space: normal;
+        }
+    }
+}
 }
 
