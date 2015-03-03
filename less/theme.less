@@ -349,7 +349,7 @@ input[type="submit"] {
         background-color: darken(@color-swatch1, 8%);
     }
     .form-body {
-        padding: 3em;
+        padding: 1.5em;
         width: 100%;
         @media @mobile {
             padding: 20px;
@@ -519,6 +519,9 @@ input[type="submit"] {
 
 .contactform .form-body {
     padding: 3.5em 3em 1.5em;
+    @media only screen and (max-width:600px) {
+        padding: 1.5em;
+    }
     @media @mobile {
         padding: 20px;
     }
@@ -555,37 +558,39 @@ input[type="submit"] {
 .columns-three-left,
 .columns-three-middle,
 .columns-three-right {
-    .signupform__form-body,
-    .blogsearch__form-body {
-        display: inline-block;
-    }
-    .contactform,
-    .signupform,
-    .blogsearch {
-        .legend {
-            position: relative;
-            left: 0;
-            right: 0;
-            width: 90%;
-            margin: 0 auto -5px;
-            padding: 10px;
-            text-align: center;
+    @media only screen and (min-width: 600px) {
+        .signupform__form-body,
+        .blogsearch__form-body {
+            display: inline-block;
         }
-        .form-body {
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-        }
-        .form-group {
-            margin-bottom: 0;
-        }
-        .form-group .input {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .button {
-            width: 100%;
-            white-space: normal;
+        .contactform,
+        .signupform,
+        .blogsearch {
+            .legend {
+                position: relative;
+                left: 0;
+                right: 0;
+                width: 90%;
+                margin: 0 auto -5px;
+                padding: 10px;
+                text-align: center;
+            }
+            .form-body {
+                padding: 20px;
+                text-align: center;
+                width: 100%;
+            }
+            .form-group {
+                margin-bottom: 0;
+            }
+            .form-group .input {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .button {
+                width: 100%;
+                white-space: normal;
+            }
         }
     }
 }
