@@ -7,6 +7,7 @@
     "pageTypes":["home"],
     "tags": {"en": ["photography", "portfolio", "art", "images", "gallery", "creative"] },
     "images":[
+        "images/feature-bg.jpg",
         "images/gallery/1.jpg",
         "images/gallery/2.jpg",
         "images/gallery/3.jpg",
