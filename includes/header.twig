@@ -1,6 +1,8 @@
 <div class="theme-border-top"></div>
+
+
 <!-- Template Widgets -->
-<div class="theme-header">
+<div class="theme-header" id="case1" data-title="01) Bad: Logo and Company Name at the same time">
     <div class="flex-container">
         <div class="brand flex-item">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
@@ -18,7 +20,225 @@
                     {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
             </div>
         </div>
-
     </div>
-
 </div>
+
+
+<!-- Template Widgets -->
+<div class="theme-header" id="case2" data-title="02) Bad: Very wide Logo and long Company Name">
+    <div class="flex-container">
+        <div class="brand flex-item">
+             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-wide.jpg')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "Trinity College Dublin"})|raw}}
+        </div>
+
+        <div class="flex-container-2">
+
+            <div class="flex-item">
+                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+
+            <div class="flex-item-two">
+                <div class="extendednavigation-line"></div>
+                    {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Template Widgets -->
+<div class="theme-header" id="case3"
+    data-title="03) Bad: Banner Logo and Company Name">
+    <div class="flex-container">
+        <div class="brand flex-item">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-banner.jpg')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "NOAA PMEL"})|raw}}
+        </div>
+
+        <div class="flex-container-2">
+
+            <div class="flex-item">
+                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+
+            <div class="flex-item-two">
+                <div class="extendednavigation-line"></div>
+                    {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Template Widgets -->
+<div class="theme-header" id="case4"
+    data-title="04) Good: Single Square Logo">
+    <div class="flex-container">
+        <div class="brand flex-item">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-square.svg')})|raw}}
+        </div>
+
+        <div class="flex-container-2">
+
+            <div class="flex-item">
+                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+
+            <div class="flex-item-two">
+                <div class="extendednavigation-line"></div>
+                    {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Template Widgets -->
+<div class="theme-header" id="case5"
+    data-title="05) Good: Single Wide Logo">
+    <div class="flex-container">
+        <div class="brand flex-item">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-wide.jpg')})|raw}}
+        </div>
+
+        <div class="flex-container-2">
+
+            <div class="flex-item">
+                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+
+            <div class="flex-item-two">
+                <div class="extendednavigation-line"></div>
+                    {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Template Widgets -->
+<div class="theme-header" id="case6"
+    data-title="06) Good: Single Banner Size Logo">
+    <div class="flex-container">
+        <div class="brand flex-item">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-banner.jpg')})|raw}}
+        </div>
+
+        <div class="flex-container-2">
+
+            <div class="flex-item">
+                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+
+            <div class="flex-item-two">
+                <div class="extendednavigation-line"></div>
+                    {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Template Widgets -->
+<div class="theme-header" id="case7"
+    data-title="07) Good: Company Name Only">
+    <div class="flex-container">
+        <div class="brand flex-item">
+            {{widget('companyname', 'companyname', {"business": "Trinity College Dublin"})|raw}}
+        </div>
+
+        <div class="flex-container-2">
+
+            <div class="flex-item">
+                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+
+            <div class="flex-item-two">
+                <div class="extendednavigation-line"></div>
+                    {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="switcher" class="switcher">
+    <button id="case-list-toggle">Case List</button>
+    <p id="currentTitle"></p>
+
+    <div class="case-list">
+        <hr />
+    </div>
+</div>
+
+<style>
+    .switcher {
+        position: fixed;
+        background-color: #ddd;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        padding: 10px;
+    }
+
+    .theme-header .container {
+        max-width: 1550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .switcher.open {
+        top: 0;
+        overflow: auto;
+    }
+
+    .case-list {
+        display: none;
+    }
+    .open .case-list {
+        display: block;
+    }
+</style>
+
+<script>
+    $('.theme-header:not(:first)').hide();
+
+    $('#case-list-toggle').click(function() {
+        $('.switcher').toggleClass('open');
+    });
+
+    $.each($('.theme-header'), function() {
+        var title = $(this).data("title");
+        var id = $(this).attr('id');
+        $('.case-list').append("<label><input type=\"radio\" name=\"case\" value=\""+id+"\" /> "+title+"</label>");
+
+    });
+
+
+
+    $(document).on("click", ".case-list input", function() {
+        $('.theme-header').hide();
+        var openid = "#"+$(this).val();
+        $(openid).show();
+        var currentTitle = $(openid).data("title");
+        $("#currentTitle").text(currentTitle);
+
+        $('.switcher').toggleClass('open');
+    });
+
+
+</script
