@@ -20,11 +20,11 @@
 // 1. #Header
 // -----------------------------
 
-.theme-border-top {
+.template-border-top {
     border-top: 5px solid @color-swatch4;
 }
 
-.theme-header {
+.template-header {
     padding: 30px 0 21px;
     position: relative;
     width: 90%;
@@ -68,7 +68,7 @@
 }
 
 .flex-container-1 {
-    // Horizontal Flexbox on Desktop
+    // Desktop - Horizontal Layout
     @media only screen and (min-width: 770px) {
         -webkit-box-direction: normal;
         -moz-box-direction: normal;
@@ -78,14 +78,14 @@
         -ms-flex-direction: row;
         flex-direction: row;
         // Flex items
-        .flex-container-1--item-1,
-        .flex-container-1--item-2 {
+        .flex-container-1__item-1,
+        .flex-container-1__item-2 {
             -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
             align-self: flex-end;
         }
     }
-    // Vertical layout on Tablet and Mobile
+    // Tablet & Mobile - Vertical Layout
     @media only screen and (max-width: 770px) {
         -webkit-box-direction: normal;
         -moz-box-direction: normal;
@@ -94,6 +94,7 @@
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        width: 100%;
     }
 
 }
@@ -107,16 +108,21 @@
     -ms-flex-direction: column;
     flex-direction: column;
     min-width: 500px;
+    @media only screen and (min-width: 770px) {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
     // Flex items
-    .flex-container-2--item-a,
-    .flex-container-2--item-b {
+    .flex-container-2__item-a,
+    .flex-container-2__item-b {
         -webkit-align-self: auto;
         -ms-flex-item-align: auto;
         align-self: auto;
     }
     // Change items order for Tablet and Mobile
     @media only screen and (max-width: 770px) {
-        .flex-container-2--item-a {
+        .flex-container-2__item-a {
             webkit-box-ordinal-group: 2;
             -moz-box-ordinal-group: 2;
             -webkit-order: 1;
@@ -125,7 +131,7 @@
             padding: 30px 0 0;
             width: 100%;
         }
-        .flex-container-2--item-b {
+        .flex-container-2__item-b {
             webkit-box-ordinal-group: 1;
             -moz-box-ordinal-group: 1;
             -webkit-order: 0;
@@ -139,7 +145,7 @@
 // Flex Items
 // ----------
 
-.template-header--flex-item {
+.template-header__flex-item {
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
     -webkit-order: 0;
@@ -154,7 +160,7 @@
 
 // Profile widget within flex-item-a
 
-.flex-container-2--item-a {
+.flex-container-2__item-a {
     .bk-profile {
         padding-left: 10%;
         position:relative;
@@ -192,7 +198,7 @@
 }
 
 // Border-bottom in Default Page
-.theme-default .theme-header {
+.theme-default .template-header {
     border-bottom: 1px solid darken(@color-swatch1, 20%);
     @media @tablet {
         padding: 30px 0;
