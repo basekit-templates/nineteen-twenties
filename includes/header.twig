@@ -1,22 +1,27 @@
 <div class="theme-border-top"></div>
 <!-- Template Widgets -->
 <div class="theme-header">
-    <div class="flex-container">
-        <div class="brand flex-item">
+    <div class="flex-container-1">
+        <div class="brand template-header--flex-item flex-container-1--item-1">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
 
-        <div class="flex-container-2">
+        <div class="template-header--flex-item flex-container-1--item-2">
 
-            <div class="flex-item">
-                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            <div class="flex-container-2">
+
+                <div class="template-header--flex-item flex-container-2--item-a">
+                    {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+                </div>
+
+                <div class="template-header--flex-item flex-container-2--item-b">
+                    <div class="extendednavigation-line"></div>
+                        {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+                </div>
+
             </div>
 
-            <div class="flex-item-two">
-                <div class="extendednavigation-line"></div>
-                    {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
-            </div>
         </div>
 
     </div>
