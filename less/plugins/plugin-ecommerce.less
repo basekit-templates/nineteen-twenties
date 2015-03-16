@@ -258,9 +258,19 @@
         height: 44px;
     }
     .fieldset--search {
+        width: 35%;
+        @media @tablet {
+            width: 100%;
+        }
         .form-body {
             padding: 0;
             background-color: transparent;
+        }
+        .form-group {
+            margin-right: 0;
+            @media @mobile {
+                margin-bottom: 20px;
+            }
         }
         .label {
             display: none;
