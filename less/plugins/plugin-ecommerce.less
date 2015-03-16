@@ -244,24 +244,38 @@
 // Products Filters
 // ----------------
 
-.product-filters .input--search {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    height: 44px;
-}
 
 .product-filters .form {
-        text-align: left;
-    .fieldset--search {
-        display: none;
-    }
+    text-align: left;
     .legend {
         padding: 10px 0;
     }
-    .form-body {
+    // Search Form
+    .input--search {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        height: 44px;
+    }
+    .fieldset--search {
+        .form-body {
+            padding: 0;
+            background-color: transparent;
+        }
+        .label {
+            display: none;
+        }
+    }
+    // Filters
+    .fieldset--filters .form-body {
         padding: 10px 20px;
         background-color: darken(@color-swatch1, 3%);
+    }
+    // Button
+    .button {
+        height: 44px;
+        margin: 0;
+        padding: 0 20px;
     }
     @media @mobile {
         .form-group,
