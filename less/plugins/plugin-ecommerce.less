@@ -366,16 +366,32 @@
     }
 }
 
+
+.product-item-image .image {
+    vertical-align: bottom;
+}
+
 .product-item-image,
 .product-item-image .image-link {
     background-color: @color-swatch1;
-    max-height: 307px;
     height: 307px;
     line-height: 307px;
-    @media @mobile {
-        max-height: 250px;
+    @media only screen and (max-width: 800px) {
         height: 250px;
         line-height: 250px;
+    }
+    @media only screen and (max-width: 800px) {
+        height: 250px;
+        line-height: 250px;
+    }
+    @media only screen and (max-width: 600px) {
+        height: 180px;
+        line-height: 180px;
+    }
+    @media @mobile {
+        height: auto;
+        max-height: 250px;
+        line-height: inherit;
     }
 }
 
