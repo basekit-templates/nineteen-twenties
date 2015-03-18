@@ -1163,9 +1163,14 @@
 
 blockquote {
     position: relative;
-    margin: 10px 0;
+    width: 80%;
+    margin: 20px auto;
     padding: 55px 30px 50px;
-    @media @mobile { padding: 55px 20px 50px; }
+    @media @mobile {
+        width: 90%;
+        margin: 10px auto;
+        padding: 55px 20px 50px;
+    }
     text-align: center;
     border: 1px solid @color-swatch3;
     box-shadow: 4px 4px 0 -1px @color-swatch1,
@@ -1177,7 +1182,7 @@ blockquote {
         left: 0;
         right: 0;
         top: 33px;
-        font-family: serif;
+        font-family: cursive;
         font-size: 50px;
         font-weight: 200;
         color: @color-swatch3;
@@ -1188,7 +1193,7 @@ blockquote {
         right: 0;
         bottom: 0;
         content: close-quote;
-        font-family: serif;
+        font-family: cursive;
         font-size: 50px;
         font-weight: 200;
         color: @color-swatch3;
