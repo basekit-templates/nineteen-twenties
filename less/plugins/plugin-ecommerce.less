@@ -259,6 +259,7 @@
 .product-filters .form {
     text-align: left;
     .legend {
+        display: none;
         padding: 10px 0;
     }
     // Search Form
@@ -269,7 +270,8 @@
         height: 44px;
     }
     .fieldset--search {
-        width: 40%;
+        width: 100%;
+        margin-bottom: 20px;
         @media @tablet {
             width: 100%;
         }
@@ -307,6 +309,7 @@
     .fieldset--filters .form-body {
         padding: 10px 20px;
         background-color: darken(@color-swatch1, 3%);
+
     }
     @media @mobile {
         .form-group,
