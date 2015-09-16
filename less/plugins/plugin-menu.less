@@ -11,7 +11,7 @@
 .menusections {
     padding: 0 0 2.5em;
     text-align: center;
-    border-bottom: 1px solid darken(@color-swatch1, 20%);
+    border-bottom: 1px solid darken(@color__body--background, 20%);
     @media only screen and (max-width: 599px) {
         padding: 0;
     }
@@ -30,7 +30,7 @@
     &:after {
         content: '\2044';
         padding-left: 8px;
-        color: darken(@color-swatch1, 20%);
+        color: darken(@color__body--background, 20%);
         @media only screen and (max-width: 599px) {
             content: '';
             padding-left: 0;
@@ -45,19 +45,19 @@
     @media only screen and (max-width: 599px) {
         padding: 15px 0 10px 0;
         width: 100%;
-        border-bottom: 1px solid darken(@color-swatch1,7%);
+        border-bottom: 1px solid darken(@color__body--background,7%);
     }
     &:last-child {
         padding-right: 0;
         margin-right: 0;
         @media only screen and (max-width: 599px) {
-            border-bottom: 1px solid darken(@color-swatch1,7%);
+            border-bottom: 1px solid darken(@color__body--background,7%);
         }
     }
 }
 
 .menu-item-name {
-    color: darken(@color-swatch1, 50%);
+    color: darken(@color__body--background, 50%);
     font-family:@font-swatch6-font-family;
     font-size:@font-swatch6-font-size;
     font-weight: @font-swatch6-font-weight;
@@ -65,7 +65,7 @@
     letter-spacing: @font-swatch6-letter-spacing;
     &:hover {
         text-decoration: none;
-        color: @font-swatch6-color-hover;
+        color: @color__primary;
     }
 }
 
@@ -86,9 +86,9 @@
         .section-title {
             position: relative;
             padding: 10px 20px;
-            color: @color-swatch3;
-            background-color: darken(@color-swatch1, 3%);
-            border: 2px solid darken(@color-swatch1, 50%);
+            color: @color__primary;
+            background-color: darken(@color__body--background, 3%);
+            border: 2px solid darken(@color__body--background, 50%);
             &:before {
               content: '';
               position: absolute;
@@ -96,7 +96,7 @@
               left: -5px;
               bottom: 3px;
               width: 5px;
-              background: darken(@color-swatch1, 50%);
+              background: darken(@color__body--background, 50%);
             }
             &:after {
               content: '';
@@ -105,7 +105,7 @@
               right: -5px;
               bottom: 3px;
               width: 5px;
-              background: darken(@color-swatch1, 50%);
+              background: darken(@color__body--background, 50%);
             }
             @media only screen and (min-width: 550px) {
                 display: inline-block;
@@ -131,7 +131,7 @@
     }
     .section-title {
         padding-bottom: 10px;
-        color: darken(@color-swatch1, 50%);
+        color: darken(@color__body--background, 50%);
     }
     .section-subtitle {
         font-family: @font-swatch5-font-family;
@@ -147,11 +147,11 @@
 .menu-section--featured {
     position: relative;
     padding: 2em 3em;
-    margin: 20px auto 60px;
+    margin: 30px auto 60px;
     width: 100%;
     box-sizing: border-box;
-    border: 2px solid darken(@color-swatch1, 50%);
-    background-color: darken(@color-swatch1, 3%);
+    border: 2px solid darken(@color__body--background, 50%);
+    background-color: darken(@color__body--background, 3%);
     &:before, &:after {
         position: absolute;
         content: "";
@@ -174,7 +174,7 @@
     .section-header {
         margin: 0 0 2em;
         padding: 0 0 1.5em;
-        border-bottom: 1px solid darken(@color-swatch1,20%);
+        border-bottom: 1px solid darken(@color__body--background,20%);
     }
     @media @mobile {
         padding: 20px;
@@ -262,18 +262,18 @@
     &:before {
         content: "\2665";
         font-size: 32px;
-        color: @color-swatch3;
+        color: @color__primary;
     }
 }
 
 .menu .menu-item--featured .item-image .image-link {
-    background-color: darken(@color-swatch1, 5%)
+    background-color: darken(@color__body--background, 5%)
 }
 
 
 // Promoted item in promoted section
 .menu-section--featured .menu-item--featured {
-    background-color: darken(@color-swatch1, 3%);
+    background-color: darken(@color__body--background, 3%);
     margin: 0;
     padding: 0;
 }
@@ -289,7 +289,7 @@
     &:before {
         content: "\2713";
         margin-right: 0;
-        color: @color-swatch3;
+        color: @color__primary;
     }
 }
 

@@ -21,7 +21,7 @@
 // -----------------------------
 
 .template-border-top {
-    border-top: 5px solid @color-swatch4;
+    border-top: 5px solid @color__secondary;
 }
 
 .template-header {
@@ -203,7 +203,7 @@
 
 // Border-bottom in Default Page
 .theme-default .template-header {
-    border-bottom: 1px solid darken(@color-swatch1, 20%);
+    border-bottom: 1px solid darken(@color__body--background, 20%);
     @media @tablet {
         padding: 30px 0;
     }
@@ -219,7 +219,7 @@
 // The style for the graphic in the top border of the footer is in widgets.less (class '.rule')
 
 .theme-footer {
-    border-top: 1px solid darken(@color-swatch1, 20%);
+    border-top: 1px solid darken(@color__body--background, 20%);
     padding: 2em 0;
     margin: 2em 0 0.5em;
     position: relative;
@@ -262,52 +262,6 @@
 
 
 // -----------------------------
-// 3. #Typography
-// -----------------------------
-
-// Colour Swatches
-// ---------------
-
-// @color-swatch1: Background
-// @color-swatch2: Contrast
-// @color-swatch3: Buttons
-// @color-swatch4: Headings
-// @color-swatch5: Paragraph
-// @color-swatch6: Navigation Links
-// @color-swatch7: Spare
-
-
-// Colour Variables
-// ----------------
-
-@bg-color: @color-swatch1;          // Background
-@contrast-color: @color-swatch2;    // Contrast Colour
-@button-color: @color-swatch3;      // Button BG Colour
-@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
-@paragraph-color: @color-swatch5;   // Paragraph Text Colour
-@nav-color: @color-swatch6;         // Nav Link Colour
-@spare-color: @color-swatch7;       // Spare Colour
-
-
-// Font Swatches
-// -------------
-
-// font1:  Heading 1
-// font2:  Heading 2
-// font3:  Heading 3
-// font4:  Heading 4
-// font5:  Paragraph
-// font6:  Navigation Link
-// font7:  Buttons
-// font8:  Feature Headline
-// font9:  Feature Strapline
-// font10: Company Name (Logo)
-
-
-
-
-
-// -----------------------------
 // 4. #Forms
 // -----------------------------
 
@@ -319,7 +273,7 @@
         font-weight: @font-swatch3-font-weight;
         line-height:bkscale(@font-swatch3-line-height,0.9);
         letter-spacing: @font-swatch3-letter-spacing;
-        color: @color-swatch3;
+        color: @color__primary;
     }
     .label {
         font-family:@font-swatch3-font-family;
@@ -354,13 +308,13 @@ input[type="submit"] {
 .contactform,
 .signupform,
 .blogsearch {
-    background-color: darken(@color-swatch1, 3%);
-    border: 2px solid darken(@color-swatch1, 50%);
+    background-color: darken(@color__body--background, 3%);
+    border: 2px solid darken(@color__body--background, 50%);
     .legend {
         width: 100%;
         padding: 10px;
         text-align: center;
-        background-color: darken(@color-swatch1, 8%);
+        background-color: darken(@color__body--background, 8%);
     }
     .form-body {
         padding: 1.5em;
@@ -425,12 +379,12 @@ input[type="submit"] {
         border: none;
         padding: 0;
         .form-body {
-            background-color: darken(@color-swatch1, 3%);
-            border: 2px solid darken(@color-swatch1, 50%);
+            background-color: darken(@color__body--background, 3%);
+            border: 2px solid darken(@color__body--background, 50%);
         }
         .legend {
-            background-color: darken(@color-swatch1, 3%);
-            border: 2px solid darken(@color-swatch1, 50%);
+            background-color: darken(@color__body--background, 3%);
+            border: 2px solid darken(@color__body--background, 50%);
             padding: 15px 10px;
             position: absolute;
             margin-top: -31px;
@@ -445,7 +399,7 @@ input[type="submit"] {
             top: 3px;
             left: -5px;
             bottom: 3px;
-            background: darken(@color-swatch1, 50%);
+            background: darken(@color__body--background, 50%);
             width: 5px;
         }
         // Legent Right Border
@@ -455,7 +409,7 @@ input[type="submit"] {
             top: 3px;
             right: -5px;
             bottom: 3px;
-            background: darken(@color-swatch1, 50%);
+            background: darken(@color__body--background, 50%);
             width: 5px;
         }
     }
