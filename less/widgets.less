@@ -279,9 +279,9 @@
 
 // Style for screen size larger than 1200px
 .feature-gallery {
-    background-color: @color-swatch2;
+    background-color: @color__secondary;
     .gallery-list {
-        border-top: 7px solid @color-swatch2;
+        border-top: 7px solid @color__secondary;
     }
     .gallery-item {
         width: 33%;
@@ -307,7 +307,7 @@
     // Screen size smaller than 1200px
     @media only screen and (max-width: 1200px) {
         .gallery-list {
-            border-top: 5px solid @color-swatch2;
+            border-top: 5px solid @color__secondary;
         }
         .gallery-item {
             margin-bottom: 5px;
@@ -323,7 +323,7 @@
     // Screen size between 769px and 920px
     @media only screen and (max-width : 920px) and (min-width : 769px) {
         .gallery-list {
-            border-top: 4px solid @color-swatch2;
+            border-top: 4px solid @color__secondary;
         }
         .gallery-item {
             margin-bottom: 4px;
@@ -348,7 +348,7 @@
     // Tablet
     @media @tablet {
         .gallery-list {
-            border-top: 3px solid @color-swatch2;
+            border-top: 3px solid @color__secondary;
         }
         .gallery-item {
             margin-bottom: 3px;
@@ -469,9 +469,9 @@
     display: none;
     margin: 0;
     padding: 20px;
-    background-color: hsla(hue(@color-swatch4),
-                           saturation(@color-swatch4),
-                           lightness(@color-swatch4), .95);
+    background-color: hsla(hue(@color__secondary),
+                           saturation(@color__secondary),
+                           lightness(@color__secondary), .95);
 }
 
 // Show Caption
@@ -526,7 +526,7 @@
         left: 15px;
         right: 15px;
         bottom: 15px;
-        border: 1px solid @color-swatch7;
+        border: 1px solid @color-swatch1;
     }
 }
 
@@ -959,7 +959,7 @@
     margin-right: 0;
     text-align: right;
     .social-link {
-        color: @color-swatch2;
+        color: @color__secondary;
         font-size: 16px;
         &:hover {
             text-decoration: none;
