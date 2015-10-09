@@ -193,7 +193,7 @@
         },
         "ecommerce": {
             "color__ecomproductslist-label--text": "@color__form-label--text",
-            "color__ecomproductslist-product-item--background": "transparent",
+            "color__ecomproductslist-product-item--background": "darken(@color__body--background, 3%)",
             "color__ecomproductslist-product-title--text": "@font-swatch3-color",
             "color__ecomproduct--background": "transparent",
             "color__ecomproduct-images--background": "transparent",
@@ -204,7 +204,7 @@
             "color__ecombasket-list--background": "transparent",
             "color__ecombasket-button--background": "@color__primary",
             "color__ecombasket-button--background--hover": "@color__secondary",
-            "color__ecombasket-button--text": "@font-swatch3-color"
+            "color__ecombasket-button--text": "@font-swatch7-color"
         }
     }
 }
