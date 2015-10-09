@@ -140,7 +140,7 @@
         },
         "site": {
             "color__body--background": "@color-swatch1",
-            "color__link--text": "@color__secondary",
+            "color__link--text": "@color__primary",
             "color__companyname--text": "@font-swatch10-color"
         },
         "typography": {
