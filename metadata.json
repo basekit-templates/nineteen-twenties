@@ -181,7 +181,7 @@
             "color__twitter-item--background": "darken(@color__body--background, 2%)"
         },
         "socialicons": {
-            "color__socialicons--icon": "@color__secondary",
+            "color__socialicons--icon": "@color__secondary"
         },
         "blog": {
             "color__blogsearch-legend--background": "@color__form-legend--background",
