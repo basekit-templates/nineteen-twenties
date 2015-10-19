@@ -2,7 +2,7 @@
     "name": "Nineteen-Twenties",
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
-    "screenshot": "screenshot.jpg",
+    "screenshot": "nineteen-twenties-screenshot.jpg",
     "templateType":"standard",
     "pageTypes":["home"],
     "tags": {"en": ["photography", "portfolio", "art", "images", "gallery", "creative"] },
