@@ -210,8 +210,8 @@
         "slideshow": {
             "color__slideshow--background": "transparent",
             "color__slideshow-caption--background": "darken(@color__body--background, 3%)",
-            "color__slideshow-title--tex": "@font-swatch7-color",
-            "color__slideshow-description--tex": "@font-swatch7-color"
+            "color__slideshow-title--text": "@font-swatch7-color",
+            "color__slideshow-description--text": "@font-swatch7-color"
         },
         "blog": {
             "color__blogsearch-legend--background": "@color__form-legend--background",
