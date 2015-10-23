@@ -147,7 +147,7 @@
             "color__header--border": "@color__secondary"
         },
         "footer": {
-            "color__footer--border": "@color__secondary"
+            "color__footer--border": "darken(@color-swatch1, 60%)"
         },
         "typography": {
             "color__h1--text": "@font-swatch1-color",
