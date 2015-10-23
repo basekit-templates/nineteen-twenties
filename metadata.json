@@ -225,8 +225,6 @@
             "color__slideshow-description--text": "@font-swatch5-color"
         },
         "blog": {
-            "color__blogsearch-legend--background": "@color__form-legend--background",
-            "color__blogsearch-legend--text": "@color__form-legend--text",
             "color__blogpostlist-article--background": "darken(@color__body--background, 3%)",
             "color__blogpostlist-title--text": "@color__primary",
             "color__blogpost-article--background": "darken(@color__body--background, 3%)",
