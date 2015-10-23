@@ -202,7 +202,7 @@
             "color__image-description--text": "@font-swatch5-color"
         },
         "twitter": {
-            "color__twitter-item--background": "darken(@color__body--background, 2%)"
+            "color__twitter-item--background": "darken(@color__body--background, 3%)"
         },
         "socialicons": {
             "color__socialicons--icon": "@color__secondary"
