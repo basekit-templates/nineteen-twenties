@@ -185,13 +185,6 @@
             "color__navigation--text--hover": "@font-swatch6-color-hover",
             "color__navigation--text--selected": "@color__primary"
         },
-        "feature": {
-            "color__feature-headline--text": "@font-swatch8-color",
-            "color__feature-strapline--text": "@font-swatch9-color",
-            "color__feature-button--text": "@font-swatch7-color",
-            "color__feature-button--background": "@color__secondary",
-            "color__feature-button--background--hover": "darken(@color__secondary, 10%)"
-        },
         "forms": {
             "color__form--background": "darken(@color__body--background, 3%)",
             "color__form-legend--text": "@color__primary",
@@ -207,6 +200,18 @@
         },
         "socialicons": {
             "color__socialicons--icon": "@color__secondary"
+        },
+        "gallery": {
+            "color__gallery--background": "@color__secondary",
+            "color__gallery-caption--background": "color-swatch1",
+            "color__gallery-title--text": "@font-swatch8-color",
+            "color__gallery-description--text": "@font-swatch9-color"
+        },
+        "slideshow": {
+            "color__slideshow--background": "transparent",
+            "color__slideshow-caption--background": "darken(@color__body--background, 3%)",
+            "color__slideshow-title--tex": "@font-swatch7-color",
+            "color__slideshow-description--tex": "@font-swatch7-color"
         },
         "blog": {
             "color__blogsearch-legend--background": "@color__form-legend--background",

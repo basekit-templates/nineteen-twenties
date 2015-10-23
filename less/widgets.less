@@ -279,9 +279,9 @@
 
 // Style for screen size larger than 1200px
 .feature-gallery {
-    background-color: @color__secondary;
+    background-color: @color__gallery--background;
     .gallery-list {
-        border-top: 7px solid @color__secondary;
+        border-top: 7px solid @color__gallery--background;
     }
     .gallery-item {
         width: 33%;
@@ -291,7 +291,7 @@
             font-size:@font-swatch8-font-size;
             font-weight: @font-swatch8-font-weight;
             line-height:@font-swatch8-line-height;
-            color: @font-swatch8-color;
+            color: @color__gallery-title--text;
             letter-spacing: @font-swatch8-letter-spacing;
         }
     }
@@ -307,7 +307,7 @@
     // Screen size smaller than 1200px
     @media only screen and (max-width: 1200px) {
         .gallery-list {
-            border-top: 5px solid @color__secondary;
+            border-top: 5px solid @color__gallery--background;
         }
         .gallery-item {
             margin-bottom: 5px;
@@ -323,7 +323,7 @@
     // Screen size between 769px and 920px
     @media only screen and (max-width : 920px) and (min-width : 769px) {
         .gallery-list {
-            border-top: 4px solid @color__secondary;
+            border-top: 4px solid @color__gallery--background;
         }
         .gallery-item {
             margin-bottom: 4px;
@@ -348,7 +348,7 @@
     // Tablet
     @media @tablet {
         .gallery-list {
-            border-top: 3px solid @color__secondary;
+            border-top: 3px solid @color__gallery--background;
         }
         .gallery-item {
             margin-bottom: 3px;
@@ -382,11 +382,28 @@
 // Image Captions
 // --------------
 
-// Gallery & Slideshow
-.image-title,
-.image-description {
-    color: @color__body--background;
+// Gallery
+.gallery {
+    .image-title {
+        color: @color__gallery-title--text;
+    }
+
+    .image-description {
+        color: @color__gallery-description--text;
+    }
 }
+
+// Slideshow
+.slideshow {
+    .image-title {
+        color: @color__gallery-title--text;
+    }
+
+    .image-description {
+        color: @color__gallery-description--text;
+    }
+}
+
 
 // Image Widget
 .imagewidget__image-link {
@@ -438,8 +455,11 @@
         font-size:@font-swatch9-font-size;
         font-weight: @font-swatch9-font-weight;
         line-height:@font-swatch9-line-height;
-        color: @font-swatch9-color;
+        color: @color__gallery-title--text;
         letter-spacing: @font-swatch9-letter-spacing;
+    }
+    .image-description {
+        color: @color__gallery-description--text;
     }
 }
 
