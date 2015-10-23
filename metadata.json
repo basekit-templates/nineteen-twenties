@@ -207,6 +207,12 @@
         "socialicons": {
             "color__socialicons--icon": "@color__secondary"
         },
+        "feature": {
+            "color__gallery--background": "@color__secondary",
+            "color__gallery-caption--background": "hsla(hue(@color__secondary), saturation(@color__secondary), lightness(@color__secondary), .95)",
+            "color__gallery-title--text": "@font-swatch8-color",
+            "color__gallery-description--text": "@font-swatch9-color"
+        },
         "gallery": {
             "color__gallery--background": "@color__secondary",
             "color__gallery-caption--background": "hsla(hue(@color__secondary), saturation(@color__secondary), lightness(@color__secondary), .95)",
