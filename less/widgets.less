@@ -737,6 +737,7 @@
 .responsiveslideshow .figure {
     background-size: cover;
     background-position: center;
+    background-color: @color__slideshow--background;
 }
 // Hide Img Element
 .responsiveslideshow .image { display: none; }
@@ -756,7 +757,7 @@
     width: auto;
     margin-bottom: -45px;
     text-align: center;
-    background-color: darken(@color__body--background, 3%);
+    background-color: @color__slideshow-caption--background;
     border: 2px solid darken(@color__body--background, 50%);
     padding: 15px 20px;
     @media @mobile {
@@ -781,9 +782,14 @@
       background: darken(@color__body--background, 50%);
       width: 5px;
     }
+    .image-title {
+        color: @color__slideshow-title--text;
+    }
+    .image-description {
+        color: @color__slideshow-description--text;
+    }
     .image-title,
     .image-description {
-        color: @font-swatch5-color;
         @media @tablet {
             font-size: bkscale(@font-swatch5-font-size,.9);
             line-height: bkscale(@font-swatch9-line-height,.9);
