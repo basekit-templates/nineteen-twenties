@@ -21,12 +21,12 @@
     float: left;
     width: 100%;
     padding: 4em;
-    background-color: darken(@color__body--background, 3%);
+    background-color: @color__ecomproduct--background;
     border: 1px solid darken(@color__body--background, 7%);
     @media @tablet {
         padding: 2em;
         width: 100%;
-        background-color: darken(@color__body--background, 3%);
+        background-color: @color__ecomproduct--background;
     }
     @media only screen and (max-width: 600px) {
         padding: 20px;
@@ -48,7 +48,7 @@
         width: 100%;
     }
     .product-image .image-link {
-        background-color: darken(@color__body--background, 3%);
+        background-color: @color__ecomproduct--background;
         max-height: 600px;
         height: auto;
         line-height: inherit;
@@ -87,10 +87,12 @@
     .product-price {
         font-size: @font-swatch3-font-size;
         line-height: @font-swatch3-line-height;
-        color: @font-swatch5-color;
+    }
+    .product-title {
+        color: @color__ecomproduct-title--text;
     }
     .product-price {
-        color: @color__primary;
+        color: @color__ecomproduct-price--text;
     }
 }
 
