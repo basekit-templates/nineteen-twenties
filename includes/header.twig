@@ -1,5 +1,12 @@
 <div class="template-border-top"></div>
 <!-- Template Widgets -->
+
+   {% if plugins.ecommerce.store.live %}
+      <div class="header-basket">
+          {{widget('ecombasket', 'shopbasket', {})|raw}}
+      </div>
+    {% endif %}
+
 <div class="template-header">
     <div class="flex-container-1">
         <div class="brand template-header__flex-item flex-container-1__item-1">

@@ -9,6 +9,7 @@
 // 1. #SINGLE PRODUCT
 // 2. #PRODUCT LIST
 // 3. #BASKET WIDGET
+// 3.1 #HEADER BASKET WIDGET
 // 4. #BASKET SUMMARY
 
 
@@ -546,6 +547,144 @@
 .view-basket {
     margin: 20px 0;
 }
+
+
+
+
+// -----------------------------
+// 3.1 #Header Basket
+// -----------------------------
+
+.header-basket {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+        width: 960px; // 1140px - 10% for margins
+        margin: 0 auto;
+    }
+}
+  
+.header-basket .ecombasket {
+    @media @tablet {
+        position: relative;
+        text-align: center;
+    }
+    .basket-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        padding: 5px 15px;
+        margin: 0 0 10px;
+        background-color: @color-swatch4;
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        -webkit-box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow:    0px 5px 4px 0px rgba(0, 0, 0, 0.15);
+            box-shadow:         0px 5px 4px 0px rgba(0, 0, 0, 0.15);
+            border: none;
+        @media @tablet {
+            position: relative;
+            padding: 10px;
+            width: 150px;
+            margin: 0 auto;
+        }
+        p, .basket-count {
+            @media @tablet {
+                padding: 0;
+                text-align: center;
+            }
+        }
+        p:before {
+            content: "";
+            background-image: image('/images/basketicon.png');
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 16px;
+            width: 21px;
+            margin: 0 10px 0 0;
+            position: relative;
+            top:3px;
+        }
+        &:hover {
+            background-color: lighten(@color-swatch4,10%);
+        }
+    }
+    &.show-content {
+        .ecombasket-pull {
+          
+            background-color: lighten(@color-swatch4,10%);
+        }
+        .ecombasket-list-container {
+            display: block;
+        }
+    }
+    .basket-body{
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        z-index: 2;
+        text-align: left;
+        border: 1px solid fade(@color-swatch5,50%);
+        background-color: lighten(@color-swatch1,30%);
+        padding: 0 1em 0.5em;
+        max-height: 500px;
+        overflow-y: scroll;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        @media @tablet {
+            position: relative;
+            top: inherit;
+            max-height: initial;
+            background-color: @color-swatch1;
+            margin-top: 5px;
+        }
+        ul {
+            display: inline-block;
+            padding: 0;
+            width: 100%;
+            li {
+                width: 100%;
+                list-style: none;
+                float: left;
+                border-bottom: 1px solid fade(@color-swatch5,10%);
+                padding: 1em 0;
+                @media @tablet {
+                    padding: 1.5em 0;
+                }
+                .ecombasket-item-image {
+                    width: 64px;
+                    height: 64px;
+                    margin-top: 5px;
+                    margin-right: 1em;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                    overflow: hidden;
+                    float: left;
+                    img {
+                        display: none;
+                    }
+                }
+                .item-remove {
+                    width: initial;
+                    top: 1.5em;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
 
 // -----------------------------
 // 4. #Basket Summary
