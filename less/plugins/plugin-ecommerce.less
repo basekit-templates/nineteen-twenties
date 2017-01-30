@@ -573,6 +573,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 9999;
         width: auto;
         padding: 5px 15px;
         margin: 0 0 10px;
@@ -589,7 +590,6 @@
             border: none;
         @media @tablet {
             position: relative;
-            padding: 10px;
             width: 150px;
             margin: 0 auto;
         }
@@ -611,19 +611,10 @@
             top:3px;
         }
         &:hover {
-            background-color: lighten(@color-swatch4,10%);
+            background-color: lighten(@color-swatch4,3%);
         }
     }
-    &.show-content {
-        .ecombasket-pull {
-          
-            background-color: lighten(@color-swatch4,10%);
-        }
-        .ecombasket-list-container {
-            display: block;
-        }
-    }
-    .basket-body{
+    .basket-body {
         display: none;
         width: 100%;
         position: absolute;
@@ -681,6 +672,11 @@
                     margin: 0;
                 }
             }
+        }
+    }
+    &.show-content {
+        .basket-body {
+            display: block;
         }
     }
 }
